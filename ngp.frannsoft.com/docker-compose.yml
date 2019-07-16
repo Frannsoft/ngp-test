@@ -1,0 +1,14 @@
+version: '3'
+services:
+  my-app: 
+    environment:
+      VIRTUAL_HOST: ngp.frannsoft.com
+      VIRTUAL_PORT: 3000
+      LETSENCRYPT_HOST: your-website.tld
+      LETSENCRYPT_EMAIL: frannsoftdev@outlook.com
+  expose:
+    - 3000
+networks:
+  default:
+    external:
+      name: nginx-proxy
