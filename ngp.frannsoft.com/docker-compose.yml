@@ -1,13 +1,14 @@
 version: '3'
 services:
   my-app: 
+    image: frannsoftdev/ngp.frannsoft.com:latest
     environment:
       VIRTUAL_HOST: ngp.frannsoft.com
       VIRTUAL_PORT: 3000
       LETSENCRYPT_HOST: ngp.frannsoft.com
       LETSENCRYPT_EMAIL: frannsoftdev@outlook.com
-  expose:
-    - 3000
+    expose:
+      - 3000
 networks:
   default:
     external:
